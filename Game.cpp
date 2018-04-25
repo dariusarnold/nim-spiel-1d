@@ -13,6 +13,8 @@ Game::Game(){}
  * @return Spieler, der gewonnen hat (1 oder 2). -1 bei Fehlern.
  */
 int Game::playGame(int k, int n, int numberOfPlayers, int computerIsPlayerNo){
+	// ueberpruefe Eingabewerte
+	if (n <= 0 or k<= 0 or n < k or k > n or computerIsPlayerNo != 1 or computerIsPlayerNo != 2) return -1;
 	int currentPlayer = 1;
 	while (n > 0){
 		playTurn(currentPlayer, computerIsPlayerNo, n , k);
