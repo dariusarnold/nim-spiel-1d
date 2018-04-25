@@ -13,12 +13,13 @@ class Game : public GameBase{
 public:
 	Game();
 	int playGame(int k, int n, int numberOfPlayers, int computerIsPlayerNo);
-	int userTurn(int playerNo, int maxNumber);
-	int computerTurn(int playerNo, int maxNumber);
-	void ToggleCurrentPlayer(int &currentPlayer);
 private:
 	int getUserAnzahl(int maxNumber);
-	int getComputerAnzahl(int maxNumber);
+	int getComputerAnzahl(int n, int k);
+	void ToggleCurrentPlayer(int &currentPlayer);
+	int userTurn(int playerNo, int maxNumber);
+	int computerTurn(int playerNo, int n, int k, int maxNumber);
+	int playTurn(int &currentPlayer, int computerIsPlayerNo, int &n, int k);
 };
 
 #endif // GAME_H
