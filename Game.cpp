@@ -44,7 +44,7 @@ int Game::getUserAnzahl(int maxNumber){
 
 int Game::getComputerAnzahl(int n, int k){
 	int result = (n-1) % (k+1);
-	return result;
+	return (result > 0)? result : 1;
 }
 
 void Game::ToggleCurrentPlayer(int &currentPlayer){
