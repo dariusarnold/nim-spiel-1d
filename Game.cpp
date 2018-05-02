@@ -14,7 +14,7 @@ Game::Game(){}
  */
 int Game::playGame(int k, int n, int numberOfPlayers, int computerIsPlayerNo){
 	// ueberpruefe Eingabewerte
-	if (n <= 0 or k<= 0 or n < k or k > n or computerIsPlayerNo != 1 or computerIsPlayerNo != 2) return -1;
+	if (n <= 0 or k<= 0 or n < k or k > n or computerIsPlayerNo != 1 and computerIsPlayerNo != 2) return -1;
 	int currentPlayer = 1;
 	while (n > 0){
 		playTurn(currentPlayer, computerIsPlayerNo, n , k);
