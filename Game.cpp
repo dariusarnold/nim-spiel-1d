@@ -71,9 +71,8 @@ int Game::getUserAnzahl(int maxNumber){
  * @return Anzahl zu entfernender Streichhoelzer.
  */
 int Game::getComputerAnzahl(int n, int k){
-	int rest = n % (k+1);
-	int anzahl = rest > 1 ? rest-1 : k;
-	return std::min(anzahl, n);
+	int result = (n-1) % (k+1);
+	return result;
 }
 
 /**
